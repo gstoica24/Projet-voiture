@@ -49,7 +49,20 @@
           </div>
         </div>
         <a href="member.html">Carte membre</a>
+        <a class="icon" onclick="myFunction()">&#9776;</a>
       </nav>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("navbar");
+          if (x.className === "nav") {
+            x.className += " responsive";
+          } else {
+            x.className = "nav";
+          }
+        }
+      </script>
+
       <section class="marque-lambo">
         <div>
           <img src="/Image/lamborghini (1).png" height="140px" alt="" />
