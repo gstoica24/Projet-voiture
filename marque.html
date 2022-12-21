@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shortcut icon" href="Image/favicon (1).ico" />
+    <title>Nos marques</title>
+    <script>
+      window.addEventListener("scroll", function (event) {
+        /* On récupère les elements html */
+        let websiteHeader = document.getElementById("website-header");
+        let youtubeVideo = document.getElementById("youtube-video");
+        let magicMenu = document.getElementById("magic-menu");
+
+        /* On récupère leur hauteur et on les + */
+        let breakpoint =
+          websiteHeader.getBoundingClientRect().height +
+          youtubeVideo.getBoundingClientRect().height;
+
+        /* On stocke la valeur de notre position (scroll) */
+        let currentYPosition = this.scrollY;
+
+        if (currentYPosition >= breakpoint - 500) {
+          magicMenu.style.display = "flex";
+        } else {
+          magicMenu.style.display = "none";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header id="website-header">
+      <nav>
+        <img src="Image/V1.png" alt="absent" width="150px" />
+        <div>
+          <span id="underline"
+            ><img
+              src="Image/phone_4.png"
+              width="30px"
+              alt="téléphone"
+            />06999999</span
+          >
+          <span
+            ><a href="https://www.facebook.com" target="_blank"
+              ><img src="/Image/facebook.png" alt="Facebook logo" /></a
+          ></span>
+          <span
+            ><a href="https://www.instagram.com" target="_blank"
+              ><img src="/Image/instagram_2.png" alt="instagram" /></a
+          ></span>
+          <span
+            ><a href="https://www.youtube.com" target="_blank"
+              ><img src="/Image/youtube_3.png" alt="Youtube" /></a
+          ></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <nav id="magic-menu">
+        <a href="index.html">Accueil</a>
+        <div class="dropdown-1">
+          <button><a href="marque.html">Location de véhicule</a></button>
+          <div class="content">
+            <a href="bugatti.html">Bugatti</a>
+            <a href="lamborghini.html">Lamborghini</a>
+            <a href="ferrari.html">Ferrari</a>
+            <a href="mclaren.html">Mclaren</a>
+          </div>
+        </div>
+        <a href="member.html">Carte membre</a>
+      </nav>
+
+      <nav id="magic-menu-mobile">
+        <a href="index.html">Accueil</a>
+        <div class="dropdown-1">
+          <button><a href="Marque.html">Location de véhicule</a></button>
+          <div class="content">
+            <a href="bugatti.html">Bugatti</a>
+            <a href="lamborghini.html">Lamborghini</a>
+            <a href="ferrari.html">Ferrari</a>
+            <a href="Aston-martin.html">Mcclaren</a>
+          </div>
+        </div>
+        <a href="member.html">Carte membre</a>
+      </nav>
+
+      <iframe
+        id="youtube-video"
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/zHQk-oWF1aM?&autoplay=1&mute=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow=" accelerometer; autoplay; muted;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+
+      <div class="logo">
+        <a href="mclaren.html"><img src="image/mclaren.png" alt="" /></a>
+        <a href="lamborghini.html"
+          ><img src="image/lamborghini.png" alt=""
+        /></a>
+        <a href="ferrari.html"><img src="image/ferrari_1.png" alt="" /></a>
+        <a href="bugatti.html"><img src="image/bugatti.png" alt="" /></a>
+        <a href="mickey.html" target="_blank"
+          ><img src="image/porsche.png" alt="porsche"
+        /></a>
+      </div>
+
+      <section id="contact-client">
+        <div class="info">
+          <img src="/Image/calendar.png" alt="" />
+          <div class="text-column">
+            <h2>Calender</h2>
+            <p>Send us a booking request with your full contact details</p>
+          </div>
+        </div>
+
+        <div class="info">
+          <img src="/Image/mail.png" alt="" />
+          <div class="text-column">
+            <h2>Mail</h2>
+            <p>
+              Our team will get back to you quickly, upon receipt of your
+              request to give you more details.
+            </p>
+          </div>
+        </div>
+
+        <div class="info">
+          <img src="/Image/map (1).png" alt="" />
+          <div class="text-column">
+            <h2>Deliver</h2>
+            <p>
+              We deliver the vehicle to you free of charge, wherever you want,
+              at the agreed time and day
+            </p>
+          </div>
+        </div>
+
+        <div class="info">
+          <img src="/Image/wallet.png" alt="" />
+          <div class="text-column">
+            <h2>Payement</h2>
+            <p>
+              You pay the amount of the rental as well as the deposit on
+              delivery, after inspection of the vehicle and signature of the
+              rental contract?
+            </p>
+          </div>
+        </div>
+
+        <div class="info">
+          <img src="/Image/map.png" alt="" />
+          <div class="text-column">
+            <h2>Return</h2>
+            <p>
+              Our team will contact you a few hours before the end of your
+              rental to organize the return
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>Society</h3>
+        <p>
+          Since 2008, our activities allow us to provide a global and exclusive
+          offer to our clients.The talents that constitute our group represent
+          one of its principal forces. The high expectations and the wish to
+          expand, combined with specific competencies of each members in
+          different domains, offers a unique dynamic and expertise. The LUXURY
+          CLUB presents a distinct know-how in each of the areas in which it
+          offers services.
+        </p>
+      </div>
+      <ul>
+        <h3>Nos agences</h3>
+        <li><a href="">Location sur Paris</a></li>
+        <li><a href="">Location sur Grenoble</a></li>
+        <li><a href="">Location sur Voiron</a></li>
+        <li><a href="">Location sur jenneve</a></li>
+        <li><a href="">Location sur Lorem</a></li>
+      </ul>
+      <ul>
+        <h3>A propos</h3>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+        <li>Lorem, ipsum.</li>
+      </ul>
+    </footer>
+  </body>
+</html>
