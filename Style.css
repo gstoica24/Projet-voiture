@@ -238,12 +238,14 @@ main nav a {
   #desktop-loca {
     display: none;
   }
+
   #mobile-loca {
     display: flex;
     align-items: center;
     padding: 30px;
   }
 }
+ 
 /*************************
 ******** Slider **********
 *************************/
@@ -541,7 +543,7 @@ ul li {
   padding-top: 66px; /* espacement avec menu */
 }
 
-text-cube {
+.text-cube {
   padding: 20px;
   animation-name: position;
   transform: rotateY(90deg);
