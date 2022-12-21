@@ -41,7 +41,6 @@ header .dropdown-1 .content {
 }
 
 header .dropdown-1:hover .content {
-display: block;
   display: flex;
   flex-direction: column;
   position: absolute;

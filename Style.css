@@ -179,7 +179,7 @@ main nav.responsive  button {
 
 main nav {
   flex-direction: column;
-  min-height: 70px;
+  min-height: 60px;
   height: 100%;
   align-items: flex-start;
 }
@@ -193,20 +193,19 @@ main nav .dropdown-1:hover .content {
 
 main nav {
   width: 100%;
-  margin-bottom: -67px;
-
-  height: 2rem;
-  color: rgba(159, 221, 51, 0.862);
-  background-color: rgba(0, 0, 0, 0.848);
-  border: 1px solid;
-  border-radius: 200px 200px 200px 200px;
-  display: flex;
+  margin: 0px;
+  padding: 1px;
+ border-radius: 0px;
   align-items: center;
-  position: relative;
-  flex-direction: row;
-  justify-content: space-evenly;
-  z-index: 1;
+  flex-direction: column;
+
 }
+main nav a:not(.content) {
+ 
+  font-size: 1rem;
+ padding: 5px;
+}
+
 }
 /*****************/
 a:hover,
