@@ -227,6 +227,23 @@ main nav a {
   display: none;
 }
 
+#desktop-loca{
+  display: flex;
+  align-items: center;
+}
+#mobile-loca{
+  display: none;
+}
+@media (max-width: 600px) {
+  #desktop-loca {
+    display: none;
+  }
+  #mobile-loca {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+  }
+}
 /*************************
 ******** Slider **********
 *************************/
@@ -402,8 +419,8 @@ ul li {
   align-items: center;
   position: relative;
   padding: 0%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 39, 120, 0.388)),
-  url(/Image/R2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.437)),
+  url(./Image/R2.jpg);
   background-size: 100vw;
   height: 50vw;
 }
@@ -419,7 +436,7 @@ ul li {
     align-items: center;
     padding: 0%;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
-    url("/Image/ferrariback.jpg");
+    url("./Image/ferrariback.jpg");
     background-size: 100vw;
     height: 50vw;
   }
@@ -430,7 +447,7 @@ ul li {
     align-items: center;
     padding: 0%;
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
-    url("/Image/lamboback.jpg");
+    url("./Image/lamboback.jpg");
     background-size: 100vw;
     height: 50vw;
   }
@@ -440,7 +457,7 @@ ul li {
     align-items: center;
     padding: 0%;
     background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)),
-    url("/Image/mclarenback01.jpg");
+    url("./Image/mclarenback01.jpg");
     background-size: 100vw;
     height: 50vw;
   }
@@ -524,20 +541,42 @@ ul li {
   padding-top: 66px; /* espacement avec menu */
 }
 
-.text-cube {
+text-cube {
   padding: 20px;
   animation-name: position;
-  transform: rotateY(0deg);
-  animation-duration: 4s;
+  transform: rotateY(90deg);
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes position {
   from {
     transform: rotateY(180deg);
   }
-
+  25% {
+    transform: rotateY(-360deg);
+  }
   to {
-    transform: rotateY(0deg);
+    transform: rotateY(-360deg);
+  }
+}
+form :hover{
+  animation-name: move-right;
+  transform: rotateX(0deg);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: .5s;
+}
+
+@keyframes move-right {
+  from {
+    transform: rotateX(0deg);
+  }
+  75% {
+    transform: rotateX(360deg);
+  }
+  to {
+    transform: rotateX(360deg);
   }
 }
 
@@ -632,7 +671,31 @@ footer div h3 {
 
 
 #micke {
-  background-image: url(/Image/miche.jpg);
+  background-image: url(./Image/miche.jpg);
+}
+
+
+/*************************
+FLIP
+*************************/
+
+#backflip{
+  animation-name: flip;
+  transform: rotateX(0deg);
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+@keyframes flip {
+  from {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
 /*********************
