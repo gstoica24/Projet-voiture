@@ -58,35 +58,33 @@ header nav div img:hover {
 main nav {
   width: 50%;
   margin: 0% 25%;
-  margin-bottom: -67px;
-  padding: 1rem;
-  height: 2rem;
   color: rgba(159, 221, 51, 0.862);
   background-color: rgba(0, 0, 0, 0.848);
   border: 1px solid;
   border-radius: 200px 200px 200px 200px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
   flex-direction: row;
   justify-content: space-evenly;
   z-index: 1;
 }
 
-main nav a:hover {
+main nav > *:hover {
   border: 2px solid rgb(238, 218, 222);
   transition: 0.3s;
   border-radius: 10px;
 }
 
-
 /*button,*/
-main nav a:not(.content) {
+main nav a {
   color: rgba(201, 197, 187, 0.75);
   font-size: 1.5rem;
-  padding: 16px;
 }
-#mobile-loca{
+
+
+
+.mobile-loca {
   color: rgba(201, 197, 187, 0.75);
   font-size: 1rem;
 }
@@ -113,13 +111,13 @@ main nav .dropdown-1 .content {
 }
 
 main nav .dropdown-1:hover .content {
+  position: absolute;
+  top: 100%;
   display: flex;
   flex-direction: column;
-  position: absolute;
   justify-content: center;
   background-color: rgb(255, 255, 255);
   opacity: 0.9;
-  top: 48px;
   width: 100%;
   padding: 12px 14px;
   box-sizing: border-box;
@@ -145,71 +143,61 @@ main nav .icon {
 
 @media (max-width: 600px) {
   main nav > a,
-  main nav  button {
-     display: none;
-}
+  main nav button {
+    display: none;
+  }
 
-main nav .icon {
-  display: block;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  width: 5% !important;
-  top: 20px;
-  padding: 0 !important;
-}
+  main nav .icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    width: 5% !important;
+    top: 20px;
+    padding: 0 !important;
+  }
 
-main nav.responsive > a {
-  padding: 10px 0;
-}
+  main nav.responsive > a {
+    padding: 10px 0;
+  }
 
-main nav.responsive > a,
-main nav.responsive  .dropdown-1 {
-  display: block;
-  width: 100%;
-}
+  main nav.responsive > a,
+  main nav.responsive .dropdown-1 {
+    display: block;
+    width: 100%;
+  }
 
-main nav.responsive > a,
-main nav.responsive  .dropdown-1 {
-  display: block;
-  width: 100%;
-  text-align: left;
-}
+  main nav.responsive > a,
+  main nav.responsive .dropdown-1 {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 
-main nav.responsive  button {
-  display: block;
-  padding: 10px 0;
-}
+  main nav.responsive button {
+    display: block;
+    padding: 10px 0;
+  }
 
-main nav {
-  flex-direction: column;
-  min-height: 60px;
-  height: 100%;
-  align-items: flex-start;
-}
+  main nav .dropdown-1:hover .content {
+    position: relative;
+    width: 100%;
+    top: 0;
+    padding-left: 30px;
+  }
 
-main nav .dropdown-1:hover .content {
-  position: relative;
-  width: 100%;
-  top: 0;
-  padding-left: 30px;    
-}
-
-main nav {
-  width: 100%;
-  margin: 0px;
-  padding: 1px;
- border-radius: 0px;
-  align-items: center;
-  flex-direction: column;
-
-}
-main nav a:not(.content) {
- 
-  font-size: 1rem;
- padding: 5px;
-}
-
+  main nav {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 60px;
+    width: 100%;
+    margin: 0px;
+    border-radius: 0px;
+  }
+  main nav a:not(.content) {
+    font-size: 1rem;
+    padding: 5px;
+  }
 }
 /*****************/
 a:hover,
@@ -223,11 +211,8 @@ main nav a {
 }
 
 #magic-menu {
-  display: none;
   position: fixed;
   top: 0;
-}
-#magic-menu-mobile {
   display: none;
 }
 
@@ -330,12 +315,11 @@ ul li {
   height: 1000px;
 }
 
-
-#contact-client{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    margin-top: 3rem;  /* espacement top*/
+#contact-client {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 3rem; /* espacement top*/
 }
 .info {
   display: flex;
@@ -350,22 +334,22 @@ ul li {
   justify-content: center;
   border-radius: 50px;
 }
-.info h2, .info p{
-    color: rgb(255, 255, 255);
+.info h2,
+.info p {
+  color: rgb(255, 255, 255);
 }
-.info:hover{
+.info:hover {
   border-color: rgb(176, 162, 80);
   transition: 1s;
 }
-.info img{
-    height: 50px;
+.info img {
+  height: 50px;
 }
-.text-column{
-    display: flex;
-    flex-direction: column;
-    width: 85%;
+.text-column {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
 }
-
 
 /* Vehicule */
 
@@ -395,7 +379,7 @@ ul li {
   border-radius: 5px;
   row-gap: 1rem;
 }
-.prix{
+.prix {
   display: flex;
   width: 100%;
   height: 50px;
@@ -412,48 +396,46 @@ ul li {
   position: relative;
   padding: 0%;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.437)),
-  url(./Image/R2.jpg);
+    url(./Image/R2.jpg);
   background-size: 100vw;
   height: 50vw;
 }
-.marque div img{
+.marque div img {
   position: absolute;
   top: 30%;
 }
 
-
 .marqueF {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
     url("./Image/ferrariback.jpg");
-    background-size: 100vw;
-    height: 50vw;
-  }
+  background-size: 100vw;
+  height: 50vw;
+}
 
-  .marque-lambo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
+.marque-lambo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.652)),
     url("./Image/lamboback.jpg");
-    background-size: 100vw;
-    height: 50vw;
-  }
-  .marque-mclaren {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0%;
-    background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+  background-size: 100vw;
+  height: 50vw;
+}
+.marque-mclaren {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0)),
     url("./Image/mclarenback01.jpg");
-    background-size: 100vw;
-    height: 50vw;
-  }
-
+  background-size: 100vw;
+  height: 50vw;
+}
 
 .text-center {
   text-align: center;
@@ -461,14 +443,15 @@ ul li {
   padding: 10% 0%;
   font-size: 1.5rem;
 }
-.text-center h3, .text-center span{
+.text-center h3,
+.text-center span {
   color: white;
 }
 
-#micke h3, #micke span {
+#micke h3,
+#micke span {
   color: black;
 }
-
 
 /* vehicule slider */
 
@@ -552,12 +535,12 @@ ul li {
     transform: rotateY(-360deg);
   }
 }
-form :hover{
+form :hover {
   animation-name: move-right;
   transform: rotateX(0deg);
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes move-right {
@@ -640,7 +623,8 @@ input[type="submit"] {
   width: 150px;
   padding: 10px;
 }
-input, #sexe{
+input,
+#sexe {
   color: black;
 }
 /***********************
@@ -661,17 +645,15 @@ footer div h3 {
   text-align: center;
 }
 
-
 #micke {
   background-image: url(./Image/miche.jpg);
 }
-
 
 /*************************
 FLIP
 *************************/
 
-#backflip{
+#backflip {
   animation-name: flip;
   transform: rotateX(0deg);
   animation-duration: 20s;
@@ -720,12 +702,6 @@ FLIP
     height: 20rem;
   }
 
-  #magic-menu-mobile {
-    display: flex;
-  }
-  #magic-menu {
-    display: none;
-  }
   #youtube-video {
     height: 100vw;
   }
@@ -762,7 +738,7 @@ FLIP
   }
 
   main nav a {
-    font-size:1.1rem;
+    font-size: 1.1rem;
   }
 
   .titre {
@@ -785,7 +761,10 @@ FLIP
 }
 
 @media (min-width: 600px) {
-  #mobile-loca {
+  .mobile-loca {
     display: none;
+  }
+  main nav > * {
+    padding: 10px;
   }
 }
