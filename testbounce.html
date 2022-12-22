@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testBounce</title>
+    <link rel="stylesheet" href="testbounce.css" />
+  </head>
+  <body>
+    <div class="full-size">
+      <span>Scroll Down</span>
+    </div>
+
+    <div class="full-size" style="background: lightblue">
+      <div id="bounce" class="">Hello :)</div>
+    </div>
+  </body>
+</html>
+
+<script>
+  /* Get element you want to animate */
+  const element = document.querySelector("#bounce");
+  /* Using IntersectionObserver to check when item is visible */
+  const observer = new IntersectionObserver((entries) => {
+    /* Add or remove class depending on whether or not item is visible */
+    element.classList.toggle("animation", entries[0].isIntersecting);
+  });
+  observer.observe(element);
+</script>

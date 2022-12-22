@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.full-size {
+    background: gainsboro;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#bounce {
+    width: 300px;
+    height: 200px;
+    background: white;
+    color: gainsboro;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation {
+    animation: scroll 1s;
+}
+
+@keyframes scroll {
+    0% {
+        margin-bottom: -50px;
+        opacity: 0;
+    }
+    80% {
+        opacity:1;
+    }
+    100% {
+        margin-bottom: 50px;
+        opacity: 0;
+    }
+}
