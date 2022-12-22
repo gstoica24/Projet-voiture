@@ -30,13 +30,13 @@
       });
 
       function displayNavMobile() {
-          var x = document.getElementById("magic-menu");
-          if (x.className === "nav") {
-            x.className += " responsive";
-          } else {
-            x.className = "nav";
-          }
+        var x = document.getElementById("magic-menu");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
         }
+      }
     </script>
   </head>
   <body>
@@ -148,11 +148,11 @@
         </div>
       </section>
       <script>
-        const element = document.querySelector('.info');
+        const element = document.querySelector(".info");
 
         const observer = new IntersectionObserver((entries) => {
           element.classList.toggle(
-            'animate__wobble',
+            "animate__wobble",
             entries[0].isIntersecting
           );
         });

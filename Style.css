@@ -79,6 +79,7 @@ button {
 }
 main nav .content a {
   color: rgb(0, 0, 0);
+
 }
 
 main nav button {
@@ -101,13 +102,16 @@ main nav .icon {
 main nav .dropdown-1:hover .content {
   display: flex;
   flex-direction: column;
+  
   position: absolute;
   top: 100%;
   padding: 12px 14px;
+  
   opacity: 0.9;
   color: rgb(255, 255, 255);
   background-color: rgb(255, 255, 255);
   border: 1px solid;
+
   border-radius: 15px;
   z-index: 1;
 }
@@ -165,6 +169,7 @@ main nav > *:hover {
 
   main nav .dropdown-1:hover .content {
     position: relative;
+  
   }
   main nav > *:hover {
     border-radius: 25px;
@@ -172,12 +177,12 @@ main nav > *:hover {
     transition: 0.3s;
   }
 
+
   #desktop-loca {
     display: none;
   }
 
 }
-
 
 #magic-menu {
   position: fixed;
@@ -237,10 +242,53 @@ main nav > *:hover {
   }
 }
 
+
 .titre {
   text-align: center;
   padding: 5rem;
   margin: 0% 10%;
+  
+}
+
+.scroll {
+  animation: scroll 2s;
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity:1;
+  }
+}
+
+ul li { /* alignement liste */
+  margin-left: 20px;
+}
+
+/********************************/
+/*********   MAIN    ************/
+/********************************/
+
+.titre {
+  text-align: center;
+  padding: 5rem;
+  margin: 0% 10%;
+  
+}
+
+.scroll {
+  animation: scroll 2s;
+}
+
+@keyframes scroll {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity:1;
+  }
 }
 
 ul li { /* alignement liste */
@@ -328,6 +376,48 @@ ul li { /* alignement liste */
   top: 30%;
 }
 
+.img-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.text-centered {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  height: max-content;
+  padding: 20px;
+  margin: 0% 10%;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  border: 5px solid;
+  border-radius: 5px;
+  row-gap: 1rem;
+  animation-name: opa;
+  animation-duration: 6s;
+}
+
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.prix {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-top: 5px solid rgb(121, 87, 18);
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
 .marque {
   display: flex;
   justify-content: center;
@@ -338,6 +428,10 @@ ul li { /* alignement liste */
   background-size: 100vw;
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.437)),
     url(./Image/R2.jpg);
+}
+.marque div img {
+  position: absolute;
+  top: 30%;
 }
 
 .marqueF {
@@ -419,6 +513,18 @@ ul li { /* alignement liste */
   overflow: hidden;
   height: fit-content;
   max-height: 430px;
+  animation-name: opa;
+  animation-duration: 6s;
+}
+
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .slides1 {
@@ -524,6 +630,7 @@ form :hover {
 
 /******************************************* FORMULAIRE ************************************/
 
+
 fieldset {
   margin-bottom: 15px;
   padding: 10px;
@@ -585,8 +692,10 @@ input,
 
 footer {
   display: flex;
-  margin: 5% 10%;
+  padding-top: 50px;
+  height: 300px;
   justify-content: space-evenly;
+  background-color: black;
 }
 
 footer div {
@@ -617,6 +726,37 @@ FLIP
   }
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+#fadeaway {
+  animation-name: fade;
+
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#fadeaway {
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

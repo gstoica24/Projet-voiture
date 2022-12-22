@@ -39,17 +39,6 @@
         <a class="icon" onclick="myFunction()">&#9776;</a>
       </nav>
 
-      <script>
-        function myFunction() {
-          var x = document.getElementById("navbar");
-          if (x.className === "nav") {
-            x.className += " responsive";
-          } else {
-            x.className = "nav";
-          }
-        }
-      </script>
-
       <div class="slider">
         <div class="slides">
           <div class="slide">
@@ -114,4 +103,24 @@
       </ul>
     </footer>
   </body>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("navbar");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+
+    /* Get element you want to animate */
+    let element = document.querySelector(".titre");
+    /* Using IntersectionObserver to check when item is visible */
+    let observer = new IntersectionObserver((entries) => {
+      /* Add or remove class depending on whether or not item is visible */
+      element.classList.toggle("scroll", entries[0].isIntersecting);
+    });
+    observer.observe(element);
+  </script>
 </html>
