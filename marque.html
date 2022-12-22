@@ -30,13 +30,13 @@
       });
 
       function displayNavMobile() {
-          var x = document.getElementById("magic-menu");
-          if (x.className === "nav") {
-            x.className += " responsive";
-          } else {
-            x.className = "nav";
-          }
+        var x = document.getElementById("magic-menu");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
         }
+      }
     </script>
   </head>
   <body>
@@ -71,8 +71,10 @@
       <nav id="magic-menu" class="nav">
         <a href="index.html">Accueil</a>
         <div class="dropdown-1">
-          <button id="desktop-loca"><a href="marque.html">Location de véhicule ↓</a></button>
-          <button class="mobile-loca" >Location de véhicule ↓</button>
+          <button id="desktop-loca">
+            <a href="marque.html">↓ Location de véhicule ↓</a>
+          </button>
+          <button class="mobile-loca">↓ Location de véhicule ↓</button>
           <div class="content">
             <a href="bugatti.html">Bugatti</a>
             <a href="lamborghini.html">Lamborghini</a>
@@ -163,11 +165,11 @@
         </div>
       </section>
       <script>
-        const element = document.querySelector('.info');
+        const element = document.querySelector(".info");
 
         const observer = new IntersectionObserver((entries) => {
           element.classList.toggle(
-            'animate__wobble',
+            "animate__wobble",
             entries[0].isIntersecting
           );
         });
