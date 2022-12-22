@@ -194,7 +194,7 @@ main nav .icon {
     margin: 0px;
     border-radius: 0px;
   }
-  main nav a:not(.content) {
+  main nav a {
     font-size: 1rem;
     padding: 5px;
   }
@@ -737,10 +737,6 @@ FLIP
     width: 80vw;
   }
 
-  main nav a {
-    font-size: 1.1rem;
-  }
-
   .titre {
     margin: 0%;
   }
@@ -760,7 +756,7 @@ FLIP
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   .mobile-loca {
     display: none;
   }
