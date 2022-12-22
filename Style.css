@@ -392,6 +392,18 @@ ul li {
   border: 5px solid;
   border-radius: 5px;
   row-gap: 1rem;
+  animation-name: opa;
+  animation-duration: 6s;
+}
+
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 .prix {
   display: flex;
@@ -474,6 +486,18 @@ ul li {
   overflow: hidden;
   height: fit-content;
   max-height: 430px;
+  animation-name: opa;
+  animation-duration: 6s;
+}
+
+@keyframes opa {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .slides1 {
@@ -647,8 +671,10 @@ input,
 
 footer {
   display: flex;
-  margin: 5% 10%;
+  padding-top: 50px;
+  height: 300px;
   justify-content: space-evenly;
+  background-color: black;
 }
 
 footer div {
@@ -683,6 +709,21 @@ FLIP
   }
   to {
     transform: rotateZ(360deg);
+  }
+}
+
+#fadeaway {
+  animation-name: fade;
+  animation-duration: 10s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
