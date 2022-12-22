@@ -231,11 +231,10 @@ main nav a {
   display: none;
 }
 
-@media (max-width:600px) {
-  #desktop-loca{
+@media (max-width: 600px) {
+  #desktop-loca {
     display: none;
   }
-  
 }
 /*************************
 ******** Slider **********
